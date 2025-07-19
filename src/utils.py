@@ -12,6 +12,7 @@ def get_names_from_file(file_path):
             clean_names.append(clean_name)
     return clean_names
 
+
 def get_eng_names(all_names):
     eng_names = []
     for name in all_names:
@@ -19,7 +20,8 @@ def get_eng_names(all_names):
             eng_names.append(name)
     return eng_names
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     names = get_names_from_file("../data/names.txt")
     only_eng = get_eng_names(names)
     print(only_eng)
