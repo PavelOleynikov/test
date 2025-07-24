@@ -11,7 +11,7 @@ def filter_by_state(list_operations: list, state="EXECUTED") -> list:
     return new_list
 
 
-def sort_by_date(list_operations: list, reverse=True) -> list:
+def sort_by_date(list_operations: list, reverse: bool = True) -> list:
     """функция сортировки списка словарей по дате"""
 
     return sorted(list_operations, key=lambda x: x["date"], reverse=reverse)
