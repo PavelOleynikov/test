@@ -3,6 +3,14 @@ import pytest
 from src.masks import get_mask_account, get_mask_card_number
 
 
+@pytest.fixture
+def card_number():
+    return ["7000792289606361",
+            "700079228960",
+            ""
+]
+
+
 def test_get_mask_card_number_no_number():
     with pytest.raises(TypeError):
         get_mask_card_number()
