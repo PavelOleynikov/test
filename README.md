@@ -25,4 +25,12 @@ pip install -r requirements.txt
 
 [{'id': 41428829, 'state': 'EXECUTED', 'date': '2019-07-03T18:35:29.512364'}, {'id': 939719570, 'state': 'EXECUTED', 'date': '2018-06-30T02:08:58.425572'}, {'id': 594226727, 'state': 'CANCELED', 'date': '2018-09-12T21:27:25.241689'}, {'id': 615064591, 'state': 'CANCELED', 'date': '2018-10-14T08:21:33.419441'}]
 
+## Как запустить тесты:
+    1. Сохраните тесты в файле 
+    2. Установите pytest, если не установлен:
+       pip install pytest
+    3. Запустите тесты:
+       например: pytest test_mask_account_card.py -v
+
+
 
