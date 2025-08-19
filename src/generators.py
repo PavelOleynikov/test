@@ -89,3 +89,14 @@ transactions = (
 usd_transactions = filter_by_currency(transactions, "USD")
 for _ in range(2):
     print(next(usd_transactions))
+
+
+def transaction_descriptions(transactions):
+    """функция описания каждой операции"""
+
+    for transaction in transactions:
+        yield transaction["description"]
+
+descriptions = transaction_descriptions(transactions)
+for _ in range(5):
+    print(next(descriptions))
