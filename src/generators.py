@@ -1,12 +1,14 @@
 from typing import Generator
 
+
 def filter_by_currency(transactions, currency):
     """функция фильтра транзакций по валюте операции"""
 
-    filtered_currency = list(filter(lambda x: x["operationAmount"]["currency"]["code"] == "USD", transactions))
+    filtered_currency = list(filter(lambda x: x["operationAmount"]["currency"]["code"] == currency, transactions))
 
     for transaction in filtered_currency:
         yield transaction
+
 
 transactions = (
     [
@@ -98,6 +100,7 @@ def transaction_descriptions(transactions):
 
     for transaction in transactions:
         yield transaction["description"]
+
 
 descriptions = transaction_descriptions(transactions)
 for _ in range(5):
