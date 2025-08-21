@@ -1,6 +1,3 @@
-from typing import Generator
-
-
 def filter_by_currency(transactions, currency):
     """функция фильтра транзакций по валюте операции"""
 
