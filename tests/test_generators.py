@@ -190,3 +190,4 @@ def test_card_number_generator_range_limits():
     generator = card_number_generator(9999999999999999, 10000000000000000)
     result = next(generator)
     assert result == "9999 9999 9999 9999"
+
