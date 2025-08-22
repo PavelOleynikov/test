@@ -97,6 +97,19 @@ def test_filter_by_currency_usd_transactions(transactions):
     }
 
 
+@pytest.mark.parametrize("currency, expected_count", [
+    ("USD", 3),
+    ("RUB", 2),
+    ("EUR", 0),
+    ("GBP", 0),
+])
+
+def test_filter_by_currency_count(transactions, currency, expected_count):
+    # Тест количества найденных транзакций по валюте
+    filtered = list(filter_by_currency(transactions, currency))
+    assert len(filtered) == expected_count
+
+
 def test_filter_by_currency_another_currency(transactions):
     # Тест фильтрации по несуществующей валюте
     eur_transactions = list(filter_by_currency(transactions, "EUR"))
