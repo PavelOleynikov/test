@@ -20,7 +20,7 @@ def log(filename=None):
 
             except Exception as e:
                 if filename:
-                    file = open(filename, "a", encoding="utf-8") #создаём и открываем файл логов
+                    file = open(filename, "a", encoding="utf-8")  # создаём и открываем файл логов
                     file.write(f"{func.__name__} error: {type(e)}. Inputs: {args}, {kwargs}" + "\n")
                     file.close()
                 else:
@@ -28,12 +28,14 @@ def log(filename=None):
                 raise
 
         return wrapper
+
     return decorator
 
 
-@log() # вывод в консоль
+@log()  # вывод в консоль
 def my_function(x, y):
     return x + y
+
 
 my_function(1, 2)
 
