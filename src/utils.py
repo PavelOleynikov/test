@@ -18,4 +18,5 @@ def get_data_operations(path: str) -> list:
     except Exception:
         return []
 
+
 print(get_data_operations('../data/operations.json'))
