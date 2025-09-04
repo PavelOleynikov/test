@@ -5,7 +5,7 @@ def get_data_operations(path: str) -> list:
     """получает данные о финансовых транзакциях из json файла"""
 
     try:
-        with open('../data/operations.json', 'r', encoding='utf-8') as file:
+        with open(path, 'r', encoding='utf-8') as file:
             data = json.load(file)
 
         if isinstance(data, list):
