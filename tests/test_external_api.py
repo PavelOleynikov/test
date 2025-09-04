@@ -1,9 +1,11 @@
-from src.external_api import convert_currency
+from typing import Any
 from unittest.mock import patch
+
+from src.external_api import convert_currency
 
 
 @patch('requests.get')
-def test_convert_currency(mock_get):
+def test_convert_currency(mock_get: Any) -> None:
     """Тест на успешную конвертацию валюты"""
     mock_get.return_value.status_code = 200
     mock_get.return_value.json.return_value = {"result": 8120.1736}
@@ -22,7 +24,7 @@ def test_convert_currency(mock_get):
 
 
 @patch('requests.get')
-def test_convert_rub(mock_get):
+def test_convert_rub(mock_get: Any) -> None:
     """Тест когда валюта в рублях"""
 
     mock_get.return_value = 'test_api_key'
