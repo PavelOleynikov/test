@@ -8,7 +8,9 @@ def test_log_error_consol(capsys) -> None:  # тест на ошибку тип�
     with pytest.raises(TypeError):
         my_function("1", 2)
     captured = capsys.readouterr()  # фикстура на вывод ошибки в консоль
-    assert "my_function error: <class 'TypeError'>. Inputs: ('1', 2), {}\n" == captured.out
+    assert (
+        "my_function error: <class 'TypeError'>. Inputs: ('1', 2), {}\n" == captured.out
+    )
 
 
 file_name = "testlog.txt"
