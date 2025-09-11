@@ -20,7 +20,6 @@ file_name = "testlog.txt"
 def test_file() -> int:
     result = my_function(1, 2)
     assert result == 3
-    return result
 
 
 def test_log_right_file() -> None:
