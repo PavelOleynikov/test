@@ -1,6 +1,5 @@
 import logging
 
-
 logger = logging.getLogger("masks")  # создаем логер с именем модуля
 logger.setLevel(logging.DEBUG)  # устанавливаем уровень логирования
 file_handler = logging.FileHandler(
