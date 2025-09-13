@@ -1,6 +1,5 @@
 import logging
 
-
 logger = logging.getLogger("masks")  # создаем логер с именем модуля
 logger.setLevel(logging.DEBUG)  # устанавливаем уровень логирования
 file_handler = logging.FileHandler(
@@ -38,9 +37,6 @@ def get_mask_card_number(card_number: str) -> str:
     return mask_number
 
 
-print(get_mask_card_number("7000792289606361"))
-
-
 def get_mask_account(account_number: str) -> str:
     """Функция маскировки номера банковского счета"""
 
@@ -55,6 +51,3 @@ def get_mask_account(account_number: str) -> str:
     mask_account = "**" + account_number[-4:]
     logger.info("маскировка номера счета")
     return mask_account
-
-
-print(get_mask_account("73654108430135874305"))
