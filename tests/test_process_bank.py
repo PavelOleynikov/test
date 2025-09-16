@@ -1,8 +1,8 @@
-import pytest
-
 from collections import Counter
 
-from src.process_bank import process_bank_search, process_bank_operations
+import pytest
+
+from src.process_bank import process_bank_operations, process_bank_search
 
 
 def test_process_bank_search() -> None:
@@ -16,7 +16,7 @@ def test_process_bank_search() -> None:
 def test_search_empty_data() -> None:
     """тест на пустой список транзакций"""
 
-    empty_data = []
+    empty_data: list = []
     search = "Перевод организации"
 
     with pytest.raises(ValueError) as e:
@@ -29,8 +29,8 @@ def test_search_empty_data() -> None:
 def test_process_bank_operations() -> None:
     """корректная обработка функции"""
 
-    data = [{"description": "Перевод организации"}]
-    categories = ["Перевод организации"]
+    data: list[dict[str, str]] = [{"description": "Перевод организации"}]
+    categories: list[str] = ["Перевод организации"]
     result = process_bank_operations(data, categories)
 
     assert isinstance(result, Counter)
@@ -40,8 +40,8 @@ def test_process_bank_operations() -> None:
 def test_operations_empty_categories() -> None:
     """тест на пустой список категорий"""
 
-    data = [{"description": "Перевод организации"}]
-    categories = []
+    data: list[dict[str, str]] = [{"description": "Перевод организации"}]
+    categories: list = []
 
     with pytest.raises(ValueError) as e:
         process_bank_operations(data, categories)

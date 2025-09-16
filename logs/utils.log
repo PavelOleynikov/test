@@ -1,6 +1,6 @@
-2025-09-11 20:56:35,694 - utils - INFO: получение данных из файла ./data/operations.json
-2025-09-11 20:56:35,710 - utils - INFO: данные из json файла корректны
-2025-09-11 20:56:35,778 - utils - INFO: получение данных из файла non_file.json
-2025-09-11 20:56:35,779 - utils - ERROR: произошла ошибка [Errno 2] No such file or directory: 'non_file.json'
-2025-09-11 20:56:35,781 - utils - INFO: получение данных из файла []
-2025-09-11 20:56:35,781 - utils - ERROR: произошла ошибка expected str, bytes or os.PathLike object, not list
+2025-09-16 01:56:27,114 - utils - INFO: получение данных из файла ./data/operations.json
+2025-09-16 01:56:27,116 - utils - INFO: данные из json файла корректны
+2025-09-16 01:56:27,217 - utils - INFO: получение данных из файла non_file.json
+2025-09-16 01:56:27,217 - utils - ERROR: произошла ошибка [Errno 2] No such file or directory: 'non_file.json'
+2025-09-16 01:56:27,221 - utils - INFO: получение данных из файла []
+2025-09-16 01:56:27,222 - utils - ERROR: произошла ошибка expected str, bytes or os.PathLike object, not list
