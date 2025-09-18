@@ -20,7 +20,7 @@ def mask_account_card(account_card: str) -> str:
     return " ".join(new_list)  # соединяем список в строку
 
 
-print(mask_account_card("Maestro 1596837868705199"))
+# print(mask_account_card("Maestro 1596837868705199"))
 
 
 def get_date(date: str) -> str:
@@ -35,4 +35,4 @@ def get_date(date: str) -> str:
     return f"{date[8:10]}.{date[5:7]}.{date[:4]}"
 
 
-print(get_date("2024-03-11T02:26:18.671407"))
+# print(get_date("2024-03-11T02:26:18.671407"))

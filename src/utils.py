@@ -34,6 +34,3 @@ def get_data_operations(file_path: str) -> list:
     except Exception as e:
         logger.error(f"произошла ошибка {e}")
         return []
-
-
-print(get_data_operations("./data/operations.json"))
