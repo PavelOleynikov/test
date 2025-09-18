@@ -3,7 +3,7 @@ import logging
 logger = logging.getLogger("masks")  # создаем логер с именем модуля
 logger.setLevel(logging.DEBUG)  # устанавливаем уровень логирования
 file_handler = logging.FileHandler(
-    "logs/masks.log", mode="w", encoding="utf-8"
+    "../logs/masks.log", mode="w", encoding="utf-8"
 )  # путь записи логов
 file_formatter = logging.Formatter(
     "%(asctime)s - %(name)s - %(levelname)s: %(message)s"
