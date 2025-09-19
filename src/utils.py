@@ -1,10 +1,14 @@
 import json
 import logging
+import os
+
+log_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "logs")
+log_file = os.path.join(log_dir, "utils.log")
 
 logger = logging.getLogger("utils")  # создаем логер с именем модуля
 logger.setLevel(logging.DEBUG)  # устанавливаем уровень логирования
 file_handler = logging.FileHandler(
-    "../logs/utils.log", mode="w", encoding="utf-8"
+    log_file, mode="w", encoding="utf-8"
 )  # путь записи логов
 file_formatter = logging.Formatter(
     "%(asctime)s - %(name)s - %(levelname)s: %(message)s"

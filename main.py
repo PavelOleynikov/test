@@ -25,13 +25,13 @@ def main():
 
     if user == 1:
         print("Для обработки выбран JSON-файл.")
-        transactions = get_data_operations("../data/operations.json")
+        transactions = get_data_operations("data/operations.json")
     elif user == 2:
         print("Для обработки выбран CSV-файл.")
-        transactions = read_csv("../data/transactions.csv")
+        transactions = read_csv("data/transactions.csv")
     elif user == 3:
         print("Для обработки выбран XLSX-файл.")
-        transactions = read_xlsx("../data/transactions_excel.xlsx")
+        transactions = read_xlsx("data/transactions_excel.xlsx")
 
     correct_status = ["EXECUTED", "CANCELED", "PENDING"]
 
