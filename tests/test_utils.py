@@ -12,5 +12,5 @@ def test_get_data_operations_file_not_found(tmp_path: Any) -> None:
 def test_get_data_operations_empty_file(tmp_path: Any) -> None:
     """Тест с пустым списком"""
 
-    result = get_data_operations([])
+    result = get_data_operations("")
     assert result == []

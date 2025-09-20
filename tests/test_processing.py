@@ -8,7 +8,7 @@ def test_filter_by_state():
         {"id": 2, "state": "CANCELED"},
         {"id": 3, "state": "EXECUTED"},
     ]
-    result_1 = filter_by_state(test_data_1)
+    result_1 = filter_by_state(test_data_1, "EXECUTED")
     assert len(result_1) == 2, "Неверное количество EXECUTED операций"
 
     # Фильтрация по CANCELED
@@ -21,7 +21,7 @@ def test_filter_by_state():
     assert len(result_2) == 2, "Неверное количество CANCELED операций"
 
     # Пустой входной список
-    assert filter_by_state([]) == [], "должен возвращать пустой список"
+    assert filter_by_state([], "") == []
 
 
 def test_sort_by_date():

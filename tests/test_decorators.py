@@ -17,7 +17,7 @@ file_name = "testlog.txt"
 
 
 @log(filename=file_name)
-def test_file() -> int:
+def test_file() -> None:
     result = my_function(1, 2)
     assert result == 3
 
