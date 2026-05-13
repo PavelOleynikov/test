@@ -1,18 +1,29 @@
-# Учебный проект по Python
+# client-s_banking_operations_widget
 
 ## Цель проекта:
 
-Учебный проект - разработка виджета банковских операций клиента.
+Учебный проект - разработка виджета банковских операций клиента. 
+Приложение фильтрует, сортирует и накладывает маску на операции клиента.
 
-## Установка:
+## Установка и запуск приложения:
 
 1. Клонируйте репозиторий:
 ```
-git clone https://github.com/PavelOleynikov/test.git
+git clone https://github.com/PavelOleynikov/client-s_banking_operations_widget.git
 ```
-2. Установите зависимости:
+cd client-s-banking-operations-widget
+
+2. Установите зависимости с помощью Poetry:
 ```
-pip install -r requirements.txt
+poetry install
+```
+3. Активируйте виртуальное окружение:
+```
+poetry shell
+```
+4. Запустите приложение:
+```
+python main.py
 ```
 ## Использование:
 
@@ -45,11 +56,9 @@ transactions = (
 ## Как запустить тесты:
     1. Сохраните тесты в файле 
     2. Установите pytest, если не установлен:
-       pip install pytest
+       poetry add pytest
     3. Запустите тесты:
        например: pytest test_mask_account_card.py -v
-       например: pytest test_generators.py -v
-       например: pytest test_decorators.py -v
 
 ## Функции в проекте:
     1. get_mask_card_number
@@ -96,5 +105,3 @@ transactions = (
 
 ### Добавлено логирование работы функций из модулей 
     masks и utils
-
-
